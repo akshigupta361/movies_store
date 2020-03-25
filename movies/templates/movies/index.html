@@ -1,5 +1,7 @@
-<table>
-    <table>
+{% extends 'movies/base.html' %}
+{% block content %}
+
+    <table class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th>Title</th>
@@ -13,10 +15,12 @@
             <tr>
                 <td>{{movie.title}}</td>
                 <td>{{movie.genre}}</td>
-                <td>{{movie.number_in_stock}}</td>
+                <td>{{movie.number_in_stocks}}</td>
                 <td>{{movie.daily_rate}}</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
-</table>
+
+
+{% endblock  %}
